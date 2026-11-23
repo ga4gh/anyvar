@@ -15,7 +15,7 @@ Clone the AnyVar repository (optionally switching to a release tag), and enter t
 
 .. code-block:: console
 
-   % git clone https://github.com/biocommons/anyvar
+   % git clone https://github.com/ga4gh/anyvar
    % cd anyvar
 
 Create all required volumes:

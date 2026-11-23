@@ -63,7 +63,7 @@ services:
       - POSTGRES_PASSWORD=anyvar-pw
 
   anyvar:
-    image: ghcr.io/biocommons/anyvar:1.0.0
+    image: ghcr.io/ga4gh/anyvar:latest
     volumes:
       - seqrepo_vol:/usr/local/share/seqrepo
     depends_on:

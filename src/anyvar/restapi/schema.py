@@ -50,11 +50,11 @@ class ServiceOrganization(BaseModel):
     """Define service_info response for organization field"""
 
     name: str = Field(
-        default="bioccommons",
+        default="ga4gh",
         description="Name of the organization responsible for the service",
     )
     url: str = Field(
-        default="https://biocommons.org",
+        default="https://ga4gh.org",
         description="URL of the website of the organization (RFC 3986 format)",
     )
 
@@ -63,7 +63,7 @@ class ServiceType(BaseModel):
     """Define service_info response for type field"""
 
     group: str = Field(
-        default="org.biocommons",
+        default="org.ga4gh",
         description="Namespace in reverse domain name format. Use `org.ga4gh` for implementations compliant with official GA4GH specifications. For services with custom APIs not standardized by GA4GH, or implementations diverging from official GA4GH specifications, use a different namespace (e.g. your organization''s reverse domain name).",
     )
     artifact: str = Field(
@@ -130,7 +130,7 @@ class ServiceInfo(BaseModel):
     """Define response structure for GA4GH /service_info endpoint."""
 
     id: str = Field(
-        default="org.biocommons.anyvar",
+        default="org.ga4gh.anyvar",
         description="Unique ID of this service. Reverse domain name notation is recommended, though not required. The identifier should attempt to be globally unique so it can be used in downstream aggregator services e.g. Service Registry.",
     )
     name: str = Field(
@@ -151,7 +151,7 @@ class ServiceInfo(BaseModel):
         description="URL of the contact for the provider of this service, e.g. a link to a contact form (RFC 3986 format), or an email (RFC 2368 format).",
     )
     documentationUrl: str = Field(  # noqa: N815
-        default="https://github.com/biocommons/anyvar",
+        default="https://github.com/ga4gh/anyvar",
         description="URL of the documentation of this service (RFC 3986 format). This should help someone learn how to use your service, including any specifics required to access data, e.g. authentication.",
     )
     createdAt: datetime = Field(  # noqa: N815

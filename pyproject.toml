@@ -1,7 +1,7 @@
 [project]
 name = "anyvar"
 authors = [
-  { name="biocommons contributors", email="biocommons-dev@googlegroups.com" },
+  { name="anyvar contributors"},
 ]
 description = "AnyVar provides Python and REST interfaces to validate, normalize, generate identifiers, and register biological sequence variation according to the GA4GH Variation Representation standards."
 readme = "README.md"
@@ -71,11 +71,11 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/biocommons/anyvar"
-Documentation = "https://github.com/biocommons/anyvar/"
-Changelog = "https://github.com/biocommons/anyvar/releases"
-Source = "https://github.com/biocommons/anyvar/"
-"Bug Tracker" = "https://github.com/biocommons/anyvar/issues"
+Homepage = "https://github.com/ga4gh/anyvar"
+Documentation = "https://anyvar.readthedocs.io/en/latest/"
+Changelog = "https://github.com/ga4gh/anyvar/releases"
+Source = "https://github.com/ga4gh/anyvar/"
+"Bug Tracker" = "https://github.com/ga4gh/anyvar/issues"
 
 
 [build-system]

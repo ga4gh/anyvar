@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "anyvar"
-author = "Biocommons"
+author = "GA4GH"
 html_title = "AnyVar"
 
 # -- General configuration ---------------------------------------------------
@@ -54,7 +54,7 @@ def linkcode_resolve(domain, info):
     if not info["module"]:
         return None
     filename = info["module"].replace(".", "/")
-    return f"https://github.com/biocommons/anyvar/blob/main/src/{filename}.py"
+    return f"https://github.com/ga4gh/anyvar/blob/main/src/{filename}.py"
 
 
 # -- code block style --------------------------------------------------------

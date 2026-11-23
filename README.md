@@ -10,16 +10,16 @@ AnyVar enables **registration**, **lookup**, and **search** of genetic variants 
 
 ## Information
 
-[![rtd](https://img.shields.io/badge/docs-readthedocs-green.svg)](http://anyvar.readthedocs.io/) [![changelog](https://img.shields.io/badge/docs-changelog-green.svg)](https://anyvar.readthedocs.io/en/latest/changelog.html) [![GitHub license](https://img.shields.io/github/license/biocommons/anyvar.svg)](https://github.com/biocommons/anyvar/blob/main/LICENSE) [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18249699-blue)](https://doi.org/10.5281/zenodo.18249699)
+[![rtd](https://img.shields.io/badge/docs-readthedocs-green.svg)](http://anyvar.readthedocs.io/) [![changelog](https://img.shields.io/badge/docs-changelog-green.svg)](https://anyvar.readthedocs.io/en/latest/changelog.html) [![GitHub license](https://img.shields.io/github/license/ga4gh/anyvar.svg)](https://github.com/ga4gh/anyvar/blob/main/LICENSE) [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18249699-blue)](https://doi.org/10.5281/zenodo.18249699)
 
 ## Latest Release
 
-[![GitHub tag](https://img.shields.io/github/tag/biocommons/anyvar.svg)](https://github.com/biocommons/anyvar) [![pypi_rel](https://img.shields.io/pypi/v/anyvar.svg)](https://pypi.org/project/anyvar/)
+[![GitHub tag](https://img.shields.io/github/tag/ga4gh/anyvar.svg)](https://github.com/ga4gh/anyvar) [![pypi_rel](https://img.shields.io/pypi/v/anyvar.svg)](https://pypi.org/project/anyvar/)
 
 ## Development
 
-[![action status](https://github.com/biocommons/anyvar/actions/workflows/python-package.yml/badge.svg)](https://github.com/biocommons/anyvar/actions/workflows/python-cqa.yml) [![issues](https://img.shields.io/github/issues-raw/biocommons/anyvar.svg)](https://github.com/biocommons/anyvar/issues)
-[![GitHub Open Pull Requests](https://img.shields.io/github/issues-pr/biocommons/anyvar.svg)](https://github.com/biocommons/anyvar/pull/) [![GitHub Contributors](https://img.shields.io/github/contributors/biocommons/anyvar.svg)](https://github.com/biocommons/anyvar/graphs/contributors/) [![GitHub stars](https://img.shields.io/github/stars/biocommons/anyvar.svg?style=social&label=Stars)](https://github.com/biocommons/anyvar/stargazers) [![GitHub forks](https://img.shields.io/github/forks/biocommons/anyvar.svg?style=social&label=Forks)](https://github.com/biocommons/anyvar/forks)
+[![action status](https://github.com/ga4gh/anyvar/actions/workflows/python-package.yml/badge.svg)](https://github.com/ga4gh/anyvar/actions/workflows/python-cqa.yml) [![issues](https://img.shields.io/github/issues-raw/ga4gh/anyvar.svg)](https://github.com/ga4gh/anyvar/issues)
+[![GitHub Open Pull Requests](https://img.shields.io/github/issues-pr/ga4gh/anyvar.svg)](https://github.com/ga4gh/anyvar/pull/) [![GitHub Contributors](https://img.shields.io/github/contributors/ga4gh/anyvar.svg)](https://github.com/ga4gh/anyvar/graphs/contributors/) [![GitHub stars](https://img.shields.io/github/stars/ga4gh/anyvar.svg?style=social&label=Stars)](https://github.com/ga4gh/anyvar/stargazers) [![GitHub forks](https://img.shields.io/github/forks/ga4gh/anyvar.svg?style=social&label=Forks)](https://github.com/ga4gh/anyvar/forks)
 
 ## Installation
 
@@ -59,4 +59,4 @@ Or issue a request against a live HTTP endpoint:
 
 ## Feedback and contributing
 
-We welcome [bug reports](https://github.com/biocommons/anyvar/issues/new?template=bug-report.md), [feature requests](https://github.com/biocommons/anyvar/issues/new?template=feature-request.md), and code contributions from users and interested collaborators. The [documentation](https://anyvar.readthedocs.io/en/latest/contributing.html) contains guidance for submitting feedback and contributing new code.
+We welcome [bug reports](https://github.com/ga4gh/anyvar/issues/new?template=bug-report.md), [feature requests](https://github.com/ga4gh/anyvar/issues/new?template=feature-request.md), and code contributions from users and interested collaborators. The [documentation](https://anyvar.readthedocs.io/en/latest/contributing.html) contains guidance for submitting feedback and contributing new code.
