@@ -8,7 +8,7 @@ Clone and enter the repo, use the ``devready`` Makefile target to set up a virtu
 
 .. code-block:: shell
 
-    git clone https://github.com/biocommons/anyvar.git
+    git clone https://github.com/ga4gh/anyvar.git
     cd anyvar
     make devready
     source venv/3.11/bin/activate

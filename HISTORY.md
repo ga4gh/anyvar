@@ -1,4 +1,4 @@
-> This file was merged into this repo in [PR #516](https://github.com/biocommons/anyvar/pull/516), before the repo was transferred to the GA4GH organization. It should stay at the root of this repo tree.
+> This file was merged into this repo in [PR #516](https://github.com/ga4gh/anyvar/pull/516), before the repo was transferred to the GA4GH organization. It should stay at the root of this repo tree.
 
 # AnyVar History
 

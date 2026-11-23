@@ -1,6 +1,6 @@
 FROM python:3.12-slim AS build
 
-LABEL org.opencontainers.image.source=https://github.com/biocommons/anyvar
+LABEL org.opencontainers.image.source=https://github.com/ga4gh/anyvar
 LABEL org.opencontainers.image.description="AnyVar container image"
 LABEL org.opencontainers.image.licenses=Apache-2.0
 
