@@ -16,10 +16,12 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     ;
 
 WORKDIR /app
-RUN python3.12 -m venv /app/venv
-COPY pyproject.toml /app/pyproject.toml
-COPY src /app/src
+RUN python3.12 -m venv /app/venv \
+    && /app/venv/bin/pip install --upgrade 'pip>=25.1'
+# Recreate the git-tracked tree at HEAD from .git, so the build uses only committed
+# files and setuptools_scm sees a clean tree (exact tag version).
 COPY .git /app/.git
+RUN git reset --hard HEAD
 ENV PATH=/app/venv/bin:$PATH
 RUN pip install -e '.[queueing,postgres,projection]' --group dev --group test
 
@@ -31,6 +33,8 @@ RUN apt-get update && apt-get install -y libpq-dev \
 COPY --from=build /app/venv /app/venv
 COPY --from=build /app/src /app/src
 COPY --from=build /app/pyproject.toml /app/pyproject.toml
+COPY --from=build /app/alembic.ini /app/alembic.ini
+COPY --from=build /app/alembic /app/alembic
 
 ENV PATH=/app/venv/bin:$PATH
 
