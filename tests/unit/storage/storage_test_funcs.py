@@ -2,6 +2,7 @@
 
 import pytest
 from ga4gh.cat_vrs.models import Constraint, DefiningAlleleConstraint
+from ga4gh.core import ga4gh_identify
 from ga4gh.vrs import models
 
 from anyvar.core import metadata
@@ -225,6 +226,28 @@ def run_sequencelocations_crud(
     # test that all sequencelocation fixtures load w/o issue
     all_sls = [a.location for a in validated_vrs_alleles.values()]
     storage.add_objects(all_sls)
+
+    # round-trip SequenceLocations with definite and indefinite VRS Range bounds
+    seq_ref = models.SequenceReference(
+        refgetAccession="SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86"
+    )
+    range_sls = [
+        models.SequenceLocation(
+            sequenceReference=seq_ref,
+            start=models.Range([None, 100]),
+            end=models.Range([200, None]),
+        ),
+        models.SequenceLocation(
+            sequenceReference=seq_ref,
+            start=models.Range([0, None]),
+            end=models.Range([50, 100]),
+        ),
+    ]
+    for sl in range_sls:
+        ga4gh_identify(sl, in_place="always")
+    storage.add_objects(range_sls)
+    for sl in range_sls:
+        assert list(storage.get_objects(models.SequenceLocation, [sl.id])) == [sl]
 
 
 def run_sequencereferences_crud(
