@@ -121,7 +121,7 @@ class SequenceLocationMapper(BaseMapper[vrs_models.SequenceLocation, orm.Locatio
         """Resolve coordinate from DB fields to VRS format."""
         if simple is not None:
             return simple
-        if start is not None and end is not None:
+        if start is not None or end is not None:
             return vrs_models.Range([start, end])
         return None
 
