@@ -459,7 +459,8 @@ class SqlAlchemyStorage(Storage):
                     self._overlaps_interval_predicate(start, stop),
                 )
                 .order_by(orm.Location.start, orm.Allele.id)
-                .limit(page_size)
+                # fetch one extra row to tell whether another page follows
+                .limit(page_size + 1)
             )
 
             # seek predicate -- assumes ORDER BY location.start ASC, allele.id ASC
@@ -472,9 +473,11 @@ class SqlAlchemyStorage(Storage):
                 )
 
             page_db = session.scalars(stmt).all()
+            has_next_page = len(page_db) > page_size
+            page_db = page_db[:page_size]
             items = [mapper_registry.from_db_entity(a) for a in page_db]
-            if not page_db:
-                return AlleleSearchPage(items=[], next_cursor=None)
+            if not has_next_page:
+                return AlleleSearchPage(items=items, next_cursor=None)
             last = page_db[-1]
             next_cursor = self._encode_search_cursor(last.location.start, last.id)
             return AlleleSearchPage(items=items, next_cursor=next_cursor)
