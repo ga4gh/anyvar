@@ -524,6 +524,7 @@ def run_search_alleles(
         page_size=1,
     )
     assert result.items == [egfr_variant]
+    assert result.next_cursor is not None
     result = storage.search_alleles(
         egfr_variant.location.sequenceReference.refgetAccession,
         55174010,
@@ -532,14 +533,16 @@ def run_search_alleles(
         cursor=result.next_cursor,
     )
     assert result.items == [braf_variant]
+    assert result.next_cursor is None
+
+    # a page that holds exactly the remaining results has no next cursor
     result = storage.search_alleles(
         egfr_variant.location.sequenceReference.refgetAccession,
         55174010,
         140753340,
-        page_size=1,
-        cursor=result.next_cursor,
+        page_size=2,
     )
-    assert result.items == []
+    assert result.items == [egfr_variant, braf_variant]
     assert result.next_cursor is None
 
 
